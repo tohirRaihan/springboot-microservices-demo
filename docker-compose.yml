@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    environment:
+      # MYSQL_ROOT_PASSWORD: root
+      # MYSQL_DATABASE: blog
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+    ports:
+      - "3306:3306"
+    networks:
+      springboot-microservices-demo-net:
+
+networks:
+  springboot-microservices-demo-net:
+    name: springboot-microservices-demo-net
