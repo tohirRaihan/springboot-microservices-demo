@@ -12,14 +12,14 @@ import org.springframework.web.bind.annotation.RestController;
 import com.tohir.employeeservice.dto.EmployeeDto;
 import com.tohir.employeeservice.service.EmployeeService;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
 @RestController
 @RequestMapping("api/employees")
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class EmployeeController {
 
-    private EmployeeService employeeService;
+    private final EmployeeService employeeService;
 
     // Build Save Employee REST API
     @PostMapping
