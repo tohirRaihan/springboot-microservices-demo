@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.tohir.employeeservice.dto.DepartmentDto;
 
-@FeignClient(url = "http://localhost:8080", value = "DEPARTMENT-SERVICE")
+@FeignClient(name = "DEPARTMENT-SERVICE")
 public interface APIClient {
     // Build get department rest api
     @GetMapping("api/departments/{department-code}")
